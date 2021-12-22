@@ -1,2 +1,12 @@
 name: A workflow for the helloworld action
 on: push
+
+jobs:
+  build:
+    name: Hello world action
+    runs-on: ubunto-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: ./actions-a
+        with:
+          MY_NAME: "Foo"
