@@ -4,9 +4,10 @@ on: push
 jobs:
   build:
     name: Hello world action
-    runs-on: ubunto-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
       - uses: ./actions-a
         with:
           MY_NAME: "Foo"
+      
